@@ -1,0 +1,15 @@
+                    Đây là folder service, là nơi thực
+                    hiện các chức năng chính của toàn bộ dự án
+
+                    1/ AbstractEntityService là 1 class abstract cùng với AccountService
+                    hoàn thiện các chức năng cho dự án
+                    -NHỮNG PHẦN MỚI HỌC ĐƯỢC:
+                    +class PasswordEncoder dùng để mã hóa mật khẩu ( có sẵn )
+
+                    +E/ID/R trong AbstractEntityService là được định nghĩa từ lớp con
+                    AccountService nếu không có lớp con này hoặc các lớp con định nghĩa
+                    các "type parameter" (E/ID/R) thì AbstractEntityService sẽ không
+                    nhận dạng được và không chạy được
+
+                    2/ TransactionService là 1 class service riêng biệt
+                    xử lý chức năng chuyển tiền của dự án

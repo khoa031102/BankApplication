@@ -1,0 +1,8 @@
+        đây là folder "Quy Ước" sử dụng các lớp
+        dùng để quy ước các đặc tính thuộc tính
+        cho 1 hoặc nhiều đối tượng trong project
+
+
+1/ ActiveStatus dùng để mô tả các trạng thái của người dùng (status):
+2/ EnumDescription dùng để bổ trợ mô tả thêm cho ActiveStatus
+vd: ActiveStatus = "ACTIVE" => ActiveStatus + EnumDescription = ActiveStatus.ACTIVE.getDescription()

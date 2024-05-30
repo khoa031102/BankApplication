@@ -1,0 +1,30 @@
+server:
+  forward-headers-strategy: framework
+
+spring:
+  application:
+    name: ${app.name}
+  profiles:
+    active: local
+  config:
+    import:
+      - config-app.yml
+      - config-db.yml
+      - config-swagger.yml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - logfile
+          - metrics
+
+logging:
+  file:
+    path: ${app.storage}/log
+
+app:
+  name: @project.name@
+  version: @build-version@

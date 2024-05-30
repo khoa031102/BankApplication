@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eBanking</title>
+</head>
+<body>
+<div class="signup-container">
+    <h1>eBanking</h1>
+    <h1>Sign up user account</h1>
+    <form id="signup-form">
+        <div class="user-box">
+            <input type="text" id="login" name="login" required>
+            <label for="login">Login</label>
+        </div>
+        <div class="user-box">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="user-box">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+        </div>
+        <div class="user-box">
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/api/account/logout" method="post">
+        <input type="submit" value="Exit">
+    </form>
+</div>
+</body>
+</html>
+
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+        var jsonData = {};
+
+        formData.forEach(function (value, key) {
+            jsonData[key] = value;
+        });
+
+        fetch('/api/auth/sign-up', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                alert('Đăng ký thành công!');
+                window.location.href = "/sign-in.html";
+            })
+            .catch(function (error) {
+                console.error('There was a problem with your fetch operation:', error);
+                alert('Đăng ký không thành công. Vui lòng thử lại sau.');
+            });
+    });
+</script>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(#87CEEB, #FFFFFF);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .signup-container {
+        width: 500px;
+        padding: 40px;
+        background: #87CEEB;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+    }
+
+    .signup-container h1 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .user-box {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        display: inline-block;
+        padding: 20px;
+        color: #000000;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        letter-spacing: 4px;
+        border-radius: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: auto;
+    }
+</style>
