@@ -1,0 +1,93 @@
+  body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url(../pic/cat2.jpg);
+      background-size: cover; /* Kéo giãn hình ảnh để bao phủ toàn bộ phần tử */
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+
+      align-items: center;
+      height: 100vh;
+    }
+
+
+    .signup-container {
+      width: 500px;
+      padding: 40px;
+      background: transparent;
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .signup-container h1 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .user-box {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+
+    .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #ffffff;
+      font-size: 12px;
+    }
+
+    input[type="submit"] {
+      display: inline-block;
+      padding: 20px;
+      margin-top: 10px;
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      letter-spacing: 4px;
+      border-radius: 50px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: auto;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(#ffffe0, #656d70);
+      color: #000000;
+      border-radius: 50px;
+      box-shadow: 0 0 5px #677272, 0 0 25px #677272, 0 0 50px #677272,
+        0 0 100px #677272;
+    }

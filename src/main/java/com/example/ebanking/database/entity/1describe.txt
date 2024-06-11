@@ -1,0 +1,6 @@
+                        Đây là folder Entity gồm các lớp thực thể
+                        ( hay còn gọi là dữ liệu của toàn bộ project)
+
+                        1/Đây là lớp thể hiện thời gian dùng để mô tả thời gian thực
+                        2/Lớp AbstractSerializable dùng để hỗ trợ project lúc chạy nếu có xảy ra lỗi
+                        3 & 4/ là các Entity chính tạo table và các cột chứa tất cả dữ liệu của toàn bộ project

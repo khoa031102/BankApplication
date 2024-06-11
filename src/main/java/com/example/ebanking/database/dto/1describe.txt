@@ -1,0 +1,14 @@
+                        Đây là folder "khai báo dữ liệu rút gọn" dùng để đưa thông
+                        tin dữ liệu vào data mà không phải gọi toàn bộ Entity
+
+
+
+
+               1 & 3/ Đây là lớp AbstractAuditingDto
+               dùng để mô tả thời gian chuyển tiền kết hợp với
+               DTO: "TransactionDto" để hoàn thiện lưu dữ liệu chuyển tiền
+               2/ AccountDto
+               dùng để lưu dữ liệu vào các trường cần thiết mà không
+               làm ảnh hưởng cũng như dư thừa thông tin cho ứng dụng
+
+

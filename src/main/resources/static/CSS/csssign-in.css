@@ -1,0 +1,137 @@
+<style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url(../pic/cat2.jpg);
+      background-size: cover; /* Kéo giãn hình ảnh để bao phủ toàn bộ phần tử */
+      background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+      background-position: center; /* Căn giữa hình ảnh */
+      width: 100vw; /* Chiều rộng bằng toàn bộ chiều rộng của viewport */
+      height: 100vh; /* Chiều cao bằng toàn bộ chiều cao của viewport */
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      width: 400px;
+      padding: 40px;
+      margin: 150px;
+      background: transparent;
+      border: #fff;
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .login-box h1 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .user-box {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+
+    .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #ffffff;
+      font-size: 12px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .login-box form button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+      background: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background: linear-gradient(#ffffe0, #656d70);
+      color: #000000;
+      border-radius: 50px;
+      box-shadow: 0 0 5px #677272, 0 0 25px #677272, 0 0 50px #677272,
+        0 0 100px #677272;
+    }
+
+    .login-box button:focus {
+      outline: none;
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+      background: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .button-link:hover {
+      background: linear-gradient(#ffffe0, #767b7d);
+      color: #000000;
+      border-radius: 50px;
+      box-shadow: 0 0 5px #647273, 0 0 25px #677272, 0 0 50px #677272,
+        0 0 100px #677272;
+    }
+</style>

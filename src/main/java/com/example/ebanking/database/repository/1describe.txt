@@ -1,0 +1,24 @@
+                        Đây là folder Repository là folder dùng chứa các
+                        class repo thực hiện việc giao tiếp với dữ liệu
+
+                        (kiểu như là dùng để gọi dữ liệu lên để thực hiện ở service )
+
+                        1/AccountEntityRepository
+                        là class repository có các chức năng
+                        + check email có tồn tại ko
+
+                        + tìm login nếu tồn tại thì trả về thông tin có login đó
+                        / ko thì trả về optional rỗng
+
+                        + tìm email nếu tồn tại thì trả về thông tin có email đó
+                        / ko thì trả về optional rỗng
+
+                        + tìm login nếu tồn tại thì trả về thông tin có cardNumber đó
+                        / ko thì trả về optional rỗng
+
+                        2/ tương tự như mấy cái trên class TransactionEntityRepository
+                        + tìm login nếu tồn tại thì trả về thông tin có id đó
+                        / ko thì trả về optional rỗng
+
+
+

@@ -1,0 +1,9 @@
+                    Đây là controller nơi thực hiện các yêu cầu http
+                    lấy các chức năng từ service để chạy chương trình
+
+                    1/AuthController là class thực hiện chức năng sign-in với sign-up
+
+                    2/cái này là gọi cái hình favicon lên (ko biết để làm gì lát hỏi)
+
+                    3/UserController dùng để thực hiện các chức năng bên trong của ứng dụng kiểu
+                    thêm xóa sửa chuyển tiền
