@@ -1,6 +1,0 @@
-app:
-  storage: ./storage
-  jwt-token:
-    secret: secret-key-of-STID-${app.name}-Version-${app.version}
-    validity: 1h
-    remember: 1d
